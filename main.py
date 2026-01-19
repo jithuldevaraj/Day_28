@@ -1,10 +1,18 @@
-import tkinter
 
+# ---------------------------- CONSTANTS ------------------------------- #
+PINK = "#e2979c"
+RED = "#e7305b"
+GREEN = "#9bdeac"
+YELLOW = "#f7f5dd"
+FONT_NAME = "Courier"
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 20
 
-window_1 = tkinter.Tk()
+# ---------------------------- TIMER RESET ------------------------------- # 
 
-label = tkinter.Label(window_1, text="window 1")
-label.pack()
+# ---------------------------- TIMER MECHANISM ------------------------------- # 
 
+# ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
-window_1.mainloop()
+# ---------------------------- UI SETUP ------------------------------- #
