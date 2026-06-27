@@ -1,5 +1,6 @@
 import tkinter
 import math
+import pygame
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -11,6 +12,14 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
+
+
+# ---------------------------- ALARM ------------------------------- #
+pygame.mixer.init()  # initialize pygame mixer
+
+def play_alarm():
+    pygame.mixer.music.load("Notification_music.wav")
+    pygame.mixer.music.play()
 
 # ---------------------------- TIMER RESET ------------------------------- # 
 
@@ -43,6 +52,7 @@ def count_down(count):
     if count > 0:
         window.after(1000, count_down, count - 1)
     elif count == 0:
+        play_alarm()
         start_timer()
 
 # ---------------------------- UI SETUP ------------------------------- #
